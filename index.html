@@ -25,43 +25,137 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
         ::-webkit-scrollbar { width: 4px; }
-        ::-webkit-scrollbar-thumb { background: #E0CFB1; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #E0CFB1; border-radius: 4px; }
+        .underline-hover { position: relative; text-decoration: none; }
+        .underline-hover::after { content: ''; position: absolute; left: 0; bottom: -2px; width: 0; height: 1px; background-color: #E0CFB1; transition: width 0.3s; }
+        .underline-hover:hover::after { width: 100%; }
     </style>
 </head>
-<body class="bg-stone-warm text-charcoal-deep font-sans antialiased">
+<body class="bg-stone-warm text-charcoal-deep font-sans antialiased overflow-x-hidden">
 
     <nav class="sticky top-0 z-50 py-6 bg-stone-warm/95 backdrop-blur-sm px-10 border-b border-charcoal-deep/5">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <div class="text-sm uppercase tracking-widest font-semibold text-charcoal-deep/60">Bespoke Digital Partner</div>
+            <div class="text-sm space-x-8 uppercase tracking-widest text-charcoal-deep/80 hidden md:block">
+                <a href="#vision" class="underline-hover">Vision</a>
+                <a href="#achievements" class="underline-hover">Achievements</a>
+                <a href="#timeline" class="underline-hover">Timeline</a>
+            </div>
             <div id="navName" class="font-serif italic text-lg text-charcoal-deep">Partner Profile</div>
         </div>
     </nav>
 
     <header class="min-h-[85vh] flex items-center p-10 lg:p-20 relative border-b border-charcoal-deep/10">
+        <div class="absolute inset-0 z-0 opacity-5">
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+                <circle cx="50" cy="50" r="40" stroke="#121212" stroke-width="0.1" fill="none" />
+            </svg>
+        </div>
+        
         <div class="max-w-6xl mx-auto z-10 w-full grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
             <div class="md:col-span-9">
-                <span class="block uppercase tracking-widest text-charcoal-deep/50 text-sm mb-6">Client Investment Retrospective</span>
-                <h1 id="mainName" class="font-serif text-[clamp(3rem,8vw,10rem)] leading-none -ml-2 mb-10 text-charcoal-deep tracking-tighter uppercase">
+                <span class="block uppercase tracking-widest text-charcoal-deep/50 text-sm mb-6">Partner Profile / 2025–2026</span>
+                <h1 id="mainName" class="font-serif text-[clamp(3.5rem,9vw,11rem)] leading-none -ml-2 mb-10 text-charcoal-deep tracking-tighter uppercase">
                     Loading...
                 </h1>
-                <p class="font-serif italic text-3xl text-charcoal-deep/70 max-w-2xl leading-snug">
-                    A chronicle of innovation and architectural web design.
+                <p class="font-serif italic text-3xl md:text-4xl text-charcoal-deep/70 max-w-2xl leading-snug">
+                    A retrospective of digital craftsmanship and bespoke architectural web design.
                 </p>
             </div>
             <div class="md:col-span-3 text-right">
-                <p class="text-sm uppercase tracking-wider text-charcoal-deep/50 mb-1">Total Contribution</p>
-                <p id="mainAmount" class="text-6xl md:text-7xl font-sans font-extralight text-champagne leading-none">
-                    0
-                </p>
+                <p class="text-sm uppercase tracking-wider text-charcoal-deep/50 mb-1">Total Digital Investment</p>
+                <p id="mainAmount" class="text-6xl md:text-7xl font-sans font-extralight text-champagne leading-none">0</p>
                 <p class="text-xl text-charcoal-deep/60 mt-1">THB</p>
             </div>
         </div>
     </header>
 
+    <section id="vision" class="p-10 lg:p-20 bg-stone-warm">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+            <div class="relative group">
+                <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800" alt="Office" class="w-full h-auto object-cover grayscale transition duration-500 group-hover:grayscale-0" />
+                <div class="absolute inset-0 border-[0.5px] border-charcoal-deep/20"></div>
+            </div>
+            <div class="max-w-xl">
+                <span class="block text-2xl font-serif italic mb-6 text-charcoal-deep/80">Defining digital elegance, together.</span>
+                <p class="text-base text-charcoal-deep/70 leading-relaxed mb-8">
+                    Since our initial partnership, the objective has been clear: to transform your vision into a series of seamless, high-performance digital environments. Every project is a testament to the pursuit of bespoke technical craftsmanship.
+                </p>
+                <blockquote class="pl-6 border-l-2 border-champagne text-sm uppercase tracking-wider text-charcoal-deep/60 italic leading-relaxed">
+                    "Your success is the blueprint of our design philosophy."
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <section id="achievements" class="p-10 lg:p-20 bg-charcoal-deep text-stone-warm">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-20 border-b border-stone-warm/10 pb-10">
+                <h2 class="font-serif text-6xl text-stone-warm max-w-lg leading-tight">Key Digital Milestones</h2>
+                <div class="flex items-center gap-6">
+                    <span class="text-7xl font-sans font-light text-champagne leading-none">30</span>
+                    <p class="text-sm uppercase tracking-widest text-stone-warm/60 max-w-[150px]">Active Partner Success Profiles</p>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-left">
+                <div class="p-8 border border-stone-warm/10 hover:border-champagne transition duration-300">
+                    <h3 class="font-serif text-3xl mb-5 text-stone-warm">UI Personalization</h3>
+                    <p class="text-sm text-stone-warm/70 leading-relaxed">High-fidelity interface design tailored to individual brand prestige and user flow optimization.</p>
+                </div>
+                <div class="p-8 border border-stone-warm/10 hover:border-champagne transition duration-300">
+                    <h3 class="font-serif text-3xl mb-5 text-stone-warm">System Architecture</h3>
+                    <p class="text-sm text-stone-warm/70 leading-relaxed">Bespoke backend and API structures designed for seamless scalability and high-load security.</p>
+                </div>
+                <div class="p-8 border border-stone-warm/10 hover:border-champagne transition duration-300">
+                    <h3 class="font-serif text-3xl mb-5 text-stone-warm">Technical Stewardship</h3>
+                    <p class="text-sm text-stone-warm/70 leading-relaxed">Ongoing elite-level maintenance and proactive updates to ensure zero-downtime performance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="timeline" class="p-10 lg:p-20 bg-stone-warm relative">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-10">
+            <div class="md:col-span-5 md:sticky md:top-32 self-start">
+                <h2 class="font-serif text-6xl text-charcoal-deep leading-tight">Project Timeline</h2>
+                <p class="text-base text-charcoal-deep/60 max-w-md mt-6">A chronological breakdown of strategic deployments and system enhancements.</p>
+            </div>
+            <div class="md:col-span-7 space-y-16 pl-10 border-l border-charcoal-deep/10 ml-5 relative">
+                <div class="relative pl-12 group">
+                    <div class="absolute -left-12 top-1.5 w-6 h-6 border-[0.5px] border-charcoal-deep/30 bg-stone-warm"></div>
+                    <span class="block text-xs uppercase tracking-widest text-charcoal-deep/50 mb-1">Current Quarter</span>
+                    <h4 class="font-serif text-2xl text-charcoal-deep">Advanced Performance Tuning</h4>
+                    <p class="text-sm text-charcoal-deep/70">Optimization of core asset delivery and global responsiveness metrics.</p>
+                </div>
+                <div class="relative pl-12 group">
+                    <div class="absolute -left-12 top-1.5 w-6 h-6 border-[0.5px] border-charcoal-deep/30 bg-stone-warm"></div>
+                    <span class="block text-xs uppercase tracking-widest text-charcoal-deep/50 mb-1">Phase 2 Achievement</span>
+                    <h4 class="font-serif text-2xl text-charcoal-deep">Architectural Integration</h4>
+                    <p class="text-sm text-charcoal-deep/70">Successful deployment of custom API modules and localized UI enhancements.</p>
+                </div>
+                <div class="relative pl-12 group">
+                    <div class="absolute -left-12 top-1.5 w-6 h-6 border-[0.5px] border-charcoal-deep/30 bg-stone-warm"></div>
+                    <span class="block text-xs uppercase tracking-widest text-charcoal-deep/50 mb-1">Foundation Phase</span>
+                    <h4 class="font-serif text-2xl text-charcoal-deep">Initial Core Framework</h4>
+                    <p class="text-sm text-charcoal-deep/70">Establishing the primary digital identity and high-performance base code.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="p-10 lg:p-20 bg-stone-warm border-t border-charcoal-deep/10 text-center md:text-left">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
+            <div>
+                <h3 class="font-serif text-4xl text-charcoal-deep italic">Bespoke Solutions.</h3>
+                <p class="text-sm uppercase tracking-widest text-charcoal-deep/40 mt-4">&copy; 2026 Client Partnerships Confidential.</p>
+            </div>
+            <a href="#" class="px-10 py-5 bg-charcoal-deep text-stone-warm uppercase tracking-widest text-sm hover:bg-champagne hover:text-charcoal-deep transition-all duration-300">Partner Console</a>
+        </div>
+    </footer>
+
     <script>
-        // 1. THE DATA REGISTRY
-        
-       const clients = [
+        const clients = [
             { name: "MR KYAW ZIN", amount: "7.65M" },
             { name: "MS THAE NU NU", amount: "1.25M" },
             { name: "MR. BINO K", amount: "1.23M" },
@@ -94,28 +188,20 @@
             { name: "MR. KHAING M", amount: "5.7K" }
         ];
 
-        // 2. THE LOGIC
         function loadClientData() {
-            // Get the ID from the URL (e.g., ?user=0)
             const urlParams = new URLSearchParams(window.location.search);
-            const userIndex = urlParams.get('user') || 0; // Default to first person if no ID
+            const userIndex = parseInt(urlParams.get('user')) || 0;
 
             const selectedClient = clients[userIndex];
 
             if (selectedClient) {
-                // Update the HTML elements with the selected client's data
                 document.getElementById('mainName').innerText = selectedClient.name;
                 document.getElementById('navName').innerText = selectedClient.name;
                 document.getElementById('mainAmount').innerText = selectedClient.amount;
                 document.title = selectedClient.name + " | Digital Legacy";
-            } else {
-                document.getElementById('mainName').innerText = "Client Not Found";
             }
         }
-
-        // Run the function when the page loads
         window.onload = loadClientData;
     </script>
-
 </body>
 </html>
